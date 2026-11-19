@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const links = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
+  { label: 'About', href: '/about' },
   { label: 'My Bookings', href: '/bookings' },
 ]
 const Navbar = () => {
