@@ -15,9 +15,9 @@ const MainLayout = () => {
         
       <main
         id="main-content"
-        tabIndex="-1"
-        className="min-h-screen w-full flex flex-col items-center"
+        tabIndex="-1" 
       >
+        {/* child component will gona come here  */}
         <Outlet />
       </main>
     </>
