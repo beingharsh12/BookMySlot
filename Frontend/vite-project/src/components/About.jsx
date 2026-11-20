@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-14 px-6 py-12 sm:px-10 lg:px-16">
+    <section className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-14 px-6 py-12 sm:px-10 lg:px-16 h-screen w-full">
 
       {/* Left Content */}
       <div className="flex w-full flex-col gap-6 md:w-1/2">
