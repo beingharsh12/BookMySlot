@@ -11,35 +11,35 @@ import About from "./components/About";
 function App() {
   return (
     <>
-    {/*routes for home  */}
+      {/*routes for home  */}
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>} />
-        </Route>
-      </Routes>
+          <Route path="/about" element={<About />} />
 
-      {/* routes for useres dash board  */}
 
-      <Routes>
-        <Route
-          element={
-            <section>
-              <h1 className="mb-6 rounded-xl bg-slate-900 px-6 py-4 text-2xl font-bold text-white">default healder of the users dashboard </h1>
-              <Outlet />
-            </section>
-          }
-        >
+          {/* routes for useres dash board  */}
           <Route
-            path="/users/services"
-            element={<div> services thanks </div>}
-          />
+            element={
+              <section>
+                <h1 className="mb-6 rounded-xl bg-slate-900 px-6 py-4 text-2xl font-bold text-white">
+                  default healder of the users dashboard{" "}
+                </h1>
+                <Outlet />
+              </section>
+            }
+            >
+            <Route
+              path="/users/services"
+              element={<div> services thanks </div>}
+            />
 
-          <Route path="/users/dashboard" element={<div>dashboard </div>} />
-
+            <Route path="/users/dashboard" element={<div>dashboard </div>} />
+          </Route>
         </Route>
-      </Routes>
 
+        
+      </Routes>
 
     </>
   );
