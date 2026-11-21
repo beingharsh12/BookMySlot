@@ -42,6 +42,9 @@ const Navbar = () => {
       </nav>
 
       <ul id="mobile-menu" hidden={!open} className="space-y-2 border-t p-4 md:hidden">
+        
+        
+        
         {links.map((l) => (
           <li key={l.href}>
             <Link to={l.href} className="block py-1 text-gray-700">
@@ -49,11 +52,16 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+
+
         <li>
           <Link to="/login" className="block py-1 font-semibold text-indigo-600">
             Login
           </Link>
         </li>
+
+
+        
       </ul>
     </header>
   )

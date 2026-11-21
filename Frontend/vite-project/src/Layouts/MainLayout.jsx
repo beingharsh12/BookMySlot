@@ -20,6 +20,8 @@ const MainLayout = () => {
         {/* child component will gona come here  */}
         <Outlet />
       </main>
+
+      
     </>
   )
 }

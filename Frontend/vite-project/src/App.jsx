@@ -7,6 +7,7 @@ import MainLayout from "./Layouts/MainLayout";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
+import UserLayout from "./Layouts/UserLayout";
 
 function App() {
   return (
@@ -17,30 +18,36 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
 
-
-          {/* routes for useres dash board  */}
-          <Route
-            element={
-              <section>
-                <h1 className="mb-6 rounded-xl bg-slate-900 px-6 py-4 text-2xl font-bold text-white">
-                  default healder of the users dashboard{" "}
-                </h1>
-                <Outlet />
-              </section>
-            }
-            >
-            <Route
-              path="/users/services"
-              element={<div> services thanks </div>}
-            />
-
-            <Route path="/users/dashboard" element={<div>dashboard </div>} />
-          </Route>
+       
         </Route>
+   {/* routes for useres dash board  */}
 
-        
+         {/* USER DASHBOARD ROUTES */}
+      <Route path="/users" element={<UserLayout />}>
+  
+        <Route
+          path="services"
+          element={<h1>Explore Services</h1>}
+        />
+ 
+        <Route
+          path="bookings"
+          element={<h1>My Bookings</h1>}
+        />
+
+        <Route
+          path="favorites"
+          element={<h1>Favorites</h1>}
+        />
+
+        <Route
+          path="profile"
+          element={<h1>My Profile</h1>}
+        />
+      </Route>
+
+
       </Routes>
-
     </>
   );
 }
