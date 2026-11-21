@@ -7,6 +7,8 @@ const [location, setLocation] = useState('')
 
  const handleSearch = (e) => {
        e.preventDefault()
+       // navigate to the search results page with the location as a query parameter
+       
        console.log('Searching for services in:', location)
  }
 
