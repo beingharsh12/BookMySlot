@@ -4,8 +4,21 @@ import UserNavbar from '../components/navigation/UserNavbar'
 const UserLayout = () => {
   return (
   <>
-  <UserNavbar/>
-    <Outlet/>
+
+  <header>
+  <UserNavbar/> 
+  </header> 
+
+
+
+  <main>
+    
+
+    <Outlet/> 
+
+  </main>
+
+
   </>
   )
 }
