@@ -8,42 +8,34 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
 import UserLayout from "./Layouts/UserLayout";
+import   Services from  './pages/user/Services'
 
 function App() {
   return (
     <>
-      {/*routes for home  */}
       <Routes>
+
+
+
+      {/*routes for home  */}
+
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
 
        
         </Route>
-   {/* routes for useres dash board  */}
 
+  
+
+   {/* routes for useres dash board  */}
+   
          {/* USER DASHBOARD ROUTES */}
       <Route path="/users" element={<UserLayout />}>
-  
-        <Route
-          path="services"
-          element={<h1>Explore Services</h1>}
-        />
- 
-        <Route
-          path="bookings"
-          element={<h1>My Bookings</h1>}
-        />
 
-        <Route
-          path="favorites"
-          element={<h1>Favorites</h1>}
-        />
-
-        <Route
-          path="profile"
-          element={<h1>My Profile</h1>}
-        />
+      {/* child pages  that will be routed in the users layout  */}
+      <Route path="services" element={<Services/>}  />
+         
       </Route>
 
 
