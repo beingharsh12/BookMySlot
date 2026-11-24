@@ -28,6 +28,14 @@ const [location, setLocation] = useState('')
           autoComplete="off"
           className="w-full flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-base focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600"
         />
+        <label htmlFor="service" className="sr-only">Service</label>
+        <input
+          id="service"
+          type="text"
+          placeholder="search for services"
+          autoComplete="off"
+          className="w-full flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-base focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+        />
         <button
           type="submit"
           className="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
