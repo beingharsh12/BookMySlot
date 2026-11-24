@@ -11,7 +11,7 @@ import UserLayout from "./Layouts/UserLayout";
 import   Services from  './pages/user/Services'
 import Favorites from "./pages/user/Favorites";
 import MyBookings from "./pages/user/MyBookings";
-
+import  Profile from './pages/user/Profile';
 function App() {
   return (
     <>
@@ -34,12 +34,13 @@ function App() {
    {/* routes for useres dash board  */}
    
          {/* USER DASHBOARD ROUTES */}
-      <Route path="/users" element={<UserLayout />}>
-
+      <Route path="/users" element={<UserLayout />}> 
+      
       {/* child pages  that will be routed in the users layout  */}
       <Route path="services" element={<Services/>}  />
       <Route path="favorites" element={<Favorites/>}  />
       <Route path="my-bookings" element={<MyBookings/>}  />
+       <Route path="profile" element={<Profile/>}  />
          
       </Route>
 
