@@ -4,7 +4,7 @@ const Services = () => {
   return (
    <>
    <h1>
-    ho
+    This is the Services page
    </h1>
       </>
   )

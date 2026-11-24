@@ -1,26 +1,24 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import UserNavbar from '../components/navigation/UserNavbar'
+
+import { Outlet } from "react-router-dom";
+import UserNavbar from "../components/navigation/UserNavbar";
+
 const UserLayout = () => {
   return (
-  <>
+    <div className="min-h-screen bg-[#F8F8FC]">
 
-  <header>
-  <UserNavbar/> 
-  </header> 
+      <UserNavbar />
 
+      {/* Dynamic Page Area */}
+      <main className="ml-64 pt-20 min-h-screen">
 
+        <div className="p-8">
+          <Outlet />
+        </div>
 
-  <main>
-    
+      </main>
 
-    <Outlet/> 
+    </div>
+  );
+};
 
-  </main>
-
-
-  </>
-  )
-}
-
-export default UserLayout
+export default UserLayout;

@@ -9,6 +9,8 @@ import Home from "./pages/public/Home";
 import About from "./pages/public/About";
 import UserLayout from "./Layouts/UserLayout";
 import   Services from  './pages/user/Services'
+import Favorites from "./pages/user/Favorites";
+import MyBookings from "./pages/user/MyBookings";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
 
        
         </Route>
+        
 
   
 
@@ -35,6 +38,8 @@ function App() {
 
       {/* child pages  that will be routed in the users layout  */}
       <Route path="services" element={<Services/>}  />
+      <Route path="favorites" element={<Favorites/>}  />
+      <Route path="my-bookings" element={<MyBookings/>}  />
          
       </Route>
 

@@ -1,26 +1,39 @@
-import React from 'react'
-import { useState } from 'react'
+
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
-    
-const [location, setLocation] = useState('')
 
- const handleSearch = (e) => {
-       e.preventDefault()
-       // navigate to the search results page with the location as a query parameter
-       
-       console.log('Searching for services in:', location)
- }
+  const [location, setLocation] = useState('')
+  const navigate = useNavigate()
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+
+    navigate(`/users/services?location=${encodeURIComponent(location)}`)
+  }
 
   return (
     <section className="flex min-h-[100vh] flex-col items-center justify-center px-4 text-center bg-gray-100 w-full">
-      <h1 className="text-3xl font-bold text-gray-900 sm:text-5xl">Book your slot. Skip the wait.</h1>
+
+      <h1 className="text-3xl font-bold text-gray-900 sm:text-5xl">
+        Book your slot. Skip the wait.
+      </h1>
+
       <p className="mt-3 max-w-xl text-gray-600">
         Find salons, clinics and local services near you.
       </p>
 
-      <form onSubmit={handleSearch} role="search" className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row">
-        <label htmlFor="location" className="sr-only">Location</label>
+      <form
+        onSubmit={handleSearch}
+        role="search"
+        className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row"
+      >
+
+        <label htmlFor="location" className="sr-only">
+          Location
+        </label>
+
         <input
           id="location"
           type="text"
@@ -30,12 +43,14 @@ const [location, setLocation] = useState('')
           autoComplete="off"
           className="w-full flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-base focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600"
         />
+
         <button
           type="submit"
-          className="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+          className="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700"
         >
           Search
         </button>
+
       </form>
     </section>
   )
