@@ -42,7 +42,7 @@ const UserNavbar = () => {
       {/* LEFT SIDEBAR */}
       <aside
         className="fixed top-0 left-0 h-screen w-64
-        bg-[#171638] text-white z-50 flex flex-col"
+        bg-[#171638] text-white z-50 flex flex-col  "
       >
         {/* Logo */}
         <div className="h-20 flex items-center px-6 border-b border-white/10">
@@ -74,7 +74,14 @@ const UserNavbar = () => {
 
         {/* logout link */}
 
-        <button onClick={logoutUser}> logout </button>
+        <button onClick={logoutUser}  
+          className=" w-[150px]  bg-purple-600 hover:bg-purple-700
+          text-white px-6 py-2.5 rounded-xl
+          font-medium transition-all duration-200"
+          
+          >
+            
+         logout </button>
       </aside>
 
       {/* TOP NAVBAR */}
