@@ -12,7 +12,9 @@ import {
 } from "react-icons/md";
 
 const Services = () => {
+
   // These values can later come from URL search parameters
+
   const [location] = useState("Meerut");
   const [service] = useState("Salon");
 

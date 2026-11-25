@@ -12,6 +12,7 @@ import   Services from  './pages/user/Services'
 import Favorites from "./pages/user/Favorites";
 import MyBookings from "./pages/user/MyBookings";
 import  Profile from './pages/user/Profile';
+import ServiceBookingPage from "./pages/user/ServiceBookingPage";
 function App() {
   return (
     <>
@@ -40,7 +41,9 @@ function App() {
       <Route path="services" element={<Services/>}  />
       <Route path="favorites" element={<Favorites/>}  />
       <Route path="my-bookings" element={<MyBookings/>}  />
-       <Route path="profile" element={<Profile/>}  />
+       <Route path="profile" element={<Profile/>}  />  
+       
+       <Route path="services/:businessId" element={ <ServiceBookingPage/>}  />
          
       </Route>
 

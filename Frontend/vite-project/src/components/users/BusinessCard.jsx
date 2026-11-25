@@ -1,6 +1,6 @@
 import React from "react";
 import photo from "../../assets/barber.png";
-
+import {Link} from "react-router-dom"
 const BusinessCard = () => {
   return (
     <>
@@ -15,22 +15,28 @@ const BusinessCard = () => {
           <h3>Civil Lines Meerut</h3>
 
           <div className="flex gap-2.5 m-top">
-            {["Haircut", "Hair Color", "Beard Trim"].map((services) => 
-              (<button
+            {["Haircut", "Hair Color", "Beard Trim"].map((services) => (
+              <button
                 key={services}
                 type="buttton"
                 className="rounded-full bg-[#ede7fb] px-3 py-1.5 text-sm font-semibold text-[#30205f]"
               >
                 {services}
-              </button>)
-            )}
+              </button>
+            ))}
           </div>
         </div>
+
+        <Link to="/users/services/1234"  >
+
 
         <div className="rounded-xl bg-[#ede7fb] flex flex-col justify-center items-center p-5">
           <p> Next Available </p>
           <p> 1:00 pm </p>
         </div>
+
+        </Link>
+
       </div>
     </>
   );
