@@ -1,23 +1,27 @@
 
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import UserNavbar from "../components/navigation/UserNavbar";
 
 const UserLayout = () => {
+  const [menuOpen, setMenuOpen] = useState(true);
+
   return (
-    <div className="min-h-screen bg-[#F8F8FC]">
+    <>
+      <UserNavbar
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
 
-      <UserNavbar />
-
-      {/* Dynamic Page Area */}
-      <main className="ml-64 pt-20 min-h-screen">
-
-        <div className="p-8">
-          <Outlet />
-        </div>
-
+      {/* MAIN CONTENT */}
+      <main
+        className={`pt-24 p-8 min-h-screen transition-all duration-300 ${
+          menuOpen ? "ml-64" : "ml-0"
+        }`}
+      >
+        <Outlet />
       </main>
-
-    </div>
+    </>
   );
 };
 
