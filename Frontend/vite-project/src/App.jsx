@@ -8,46 +8,37 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
 import UserLayout from "./Layouts/UserLayout";
-import   Services from  './pages/user/Services'
+import Services from "./pages/user/Services";
 import Favorites from "./pages/user/Favorites";
 import MyBookings from "./pages/user/MyBookings";
-import  Profile from './pages/user/Profile';
+import Profile from "./pages/user/Profile";
 import ServiceBookingPage from "./pages/user/ServiceBookingPage";
+import UserLogin from "./pages/LoginAndResgister/UserLogin"
+import UserRegister from "./pages/LoginAndResgister/UserRegister"
 function App() {
   return (
     <>
       <Routes>
-
-
-
-      {/*routes for home  */}
+        {/*routes for home  */}
 
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-
-       
+           <Route path="/user-login" element={<UserLogin/>} />
+           <Route path="/user-register" element={<UserRegister/>} />
         </Route>
-        
 
-  
+        {/* routes for useres dash board  */}
 
-   {/* routes for useres dash board  */}
-   
-         {/* USER DASHBOARD ROUTES */}
-      <Route path="/users" element={<UserLayout />}> 
-      
-      {/* child pages  that will be routed in the users layout  */}
-      <Route path="services" element={<Services/>}  />
-      <Route path="favorites" element={<Favorites/>}  />
-      <Route path="my-bookings" element={<MyBookings/>}  />
-       <Route path="profile" element={<Profile/>}  />  
-       
-       <Route path="services/:businessId" element={ <ServiceBookingPage/>}  />
-         
-      </Route>
-
-
+        {/* USER DASHBOARD ROUTES */}
+        <Route path="/users" element={<UserLayout />}>
+          {/* child pages  that will be routed in the users layout  */}
+          <Route path="services" element={<Services />} />
+          <Route path="favorites" element={<Favorites />} />
+          <Route path="my-bookings" element={<MyBookings />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="services/:businessId" element={<ServiceBookingPage />} />
+        </Route>
       </Routes>
     </>
   );

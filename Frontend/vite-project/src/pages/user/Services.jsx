@@ -126,31 +126,10 @@ const Services = () => {
           </p>
         </div>
 
-        {/* SORT */}
-        <div className="flex items-center gap-3">
-
-          <span className="text-sm text-gray-500 whitespace-nowrap">
-            Sort by:
-          </span>
-
-          <div className="relative">
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="appearance-none border border-gray-200 bg-white rounded-xl py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 outline-none focus:border-purple-500 cursor-pointer"
-            >
-              <option>Recommended</option>
-              <option>Highest Rated</option>
-              <option>Nearest First</option>
-              <option>Price: Low to High</option>
-            </select>
-
-            <MdKeyboardArrowDown className="absolute right-3 top-1/2 -translate-y-1/2 text-xl pointer-events-none" />
-          </div>
+    
 
         </div>
 
-      </div>
 
 
       {/* FILTER BUTTONS */}

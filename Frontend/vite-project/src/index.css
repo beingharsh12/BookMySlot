@@ -14,8 +14,9 @@ img {
 }
 
 :focus-visible {
-  outline: 3px solid #166534;
+  outline: 2px solid rgb(64, 4, 148);
   outline-offset: 4px;
+  border-radius: 5px;
 }
 
 
